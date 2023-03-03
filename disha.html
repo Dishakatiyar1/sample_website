@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sample_website </title>
+    <style>
+        *{
+           margin : 0;
+           padding : 0; 
+           box-sizing: border-box;
+           background-color: white;
+           font-family: Arial, Helvetica, sans-serif;
+        }
+        .main-div{
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-bar{
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            padding: 10px 20px;
+        }
+        .items{
+            display: flex;
+            flex-direction: row;
+        }
+        .items div{
+            font-size: medium;
+            padding: 22px 20px;
+            font-weight: 500px;
+        }
+        .items div img{
+            height : 20px;
+            width: 20px;
+            font-weight: 500;
+        }
+        .second-div{
+            position: relative;
+        }
+        .second-div img{
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content h1{
+            position: absolute;
+            top : 15%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 50px;
+        }
+        
+        .content p{
+            position: absolute;
+            top: 50%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 50px;
+            line-height: 1.2rem;
+            font-size: 80%;
+        }
+        .third-div{
+            display: flex;
+            flex-direction: column;
+            padding: 75px 100px;
+        }
+        .third-div p{
+            margin: 5px 0px; 
+        }
+        .cards{
+            display: flex;
+            flex-direction: row;
+        }
+        .card{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            padding: 0px 25px;
+        }
+        .card p{
+            padding: 20px 0px;
+            font-size: 80%;
+            line-height: 1.5rem;
+        }
+        .card button{
+            background-color: black;
+            color: white;
+            border-radius: 1rem;
+            height: 30px;
+            width: 100px;
+        }
+        .fourth-div{
+            position: relative;
+        }
+        .fourth-div img{
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content1 h1{
+            position: absolute;
+            top : 15%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 50px;
+        }
+        .content1 .p1{
+            position: absolute;
+            top: 25%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 50px;
+            line-height: 1.2rem;
+            font-size: 80%;
+        }
+        .content1 .p2{
+            position: absolute;
+            top: 35%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 50px;
+            line-height: 1.2rem;
+            font-size: 80%;
+        }
+        .content1 h4 .text1{
+            position: absolute;
+            top : 40%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 50px;
+            margin-top: 50px;
+            font-style: italic;
+        }
+        .content1 h4 .text2{
+            position: absolute;
+            top : 40%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 180px;
+            margin-top: 50px;
+            font-family: avec'simple;
+        }
+        .content1 h4 .text3{
+            position: absolute;
+            top : 40%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 320px;
+            margin-top: 50px;
+            font-family: whitespace;
+        }
+        .content1 h4 .text4{
+            position: absolute;
+            top : 40%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 480px;
+            margin-top: 50px;
+            font-family: mnmalsm;
+        }
+        .content1 h4 .text5{
+            position: absolute;
+            top : 40%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 605px;
+            margin-top: 50px;
+            font-family: barcelona33;
+        }
+        .content1 h4 .text6{
+            position: absolute;
+            top : 40%;
+            background-color: transparent;
+            color: white;
+            padding: 20px;
+            margin-left: 740px;
+            margin-top: 50px;
+            font-family: smoothVANILLA;
+        }
+        .fifth-div{
+            display: flex;
+            flex-direction: column;
+            padding: 75px 100px;
+        }
+        .fifth-div p{
+            font-size: 80%;
+            padding: 3px 0px;
+        }
+        .fifth-div img{
+            margin-top: 50px;
+            height: 180px;
+            width: 330px;
+        }
+        .cards1{
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .card1{
+            border-radius: 3px;
+        }
+        .sixth-div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            height: 100px;
+            width: 100%;
+        }
+        .sixth-div p{
+            background: transparent;
+            color: white;
+        }
+        .sixth-div button{
+            margin-left: 10px;
+            border-radius: 0.1rem;
+            border: white;
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+        }
+        .seventh-div{
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            height: 150px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .seventh-div img{
+            height: 50px;
+            width: 50px;
+        }
+        .seventh-div p{
+            color: white;
+            background: transparent;
+            font-size: 80%;
+            line-height: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="nav-bar">
+            <div class="logo"> <img src ="logoo.jpg"/></div>
+            <div class="items">
+                <div> Sample </div>
+                <div> Features </div>
+                <div> Layouts </div>
+                <div> Our Shop </div>
+                <div> Buy Theme </div>
+                <div> <img src="search bar.svg"/> </div>
+            </div>
+        </div>
+        <div class="second-div">
+            <img src="b1.jpg"/>
+            <div class="content">
+                <h1> We Crush <br/> Minimal <br/> Design. </h1>
+                <p> MONOCHROME is a creative agency based in Chicago. We <br/> developed the Genesis Framework and build mobile-optimized <br/> theme for Word-Press.</p>
+            </div>
+        </div>
+        <div class="third-div">
+            <h1> We Build Experience. </h1>
+            <p> A minimalist approach is the only way to design a website.</p>
+            <br/>
+            <p> __ </p>
+            <div class="cards">
+                <div class="card">
+                    <h4> DESIGN </h4>
+                    <p> With an emphasize on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p>
+                    <button> Learn More </button>
+                </div>
+                <div class="card">
+                    <h4> CONTENT </h4>
+                    <p> Our team will teach you the art of writing audience-focused content that will help you achieve the success you truely deserve.</p>
+                    <button> Learn More </button>
+                </div>
+                <div class="card">
+                    <h4> STRATEGY </h4>
+                    <p> We help creative entrepreneurs build their digital business by focusing on three key elements of a successful online plateform.</p>
+                    <button> Learn More </button>
+                </div>
+            </div>
+        </div>
+        <div class="fourth-div">
+            <img src="b2.jpg"/>
+            <div class="content1">
+                <h1> We Design Brands. </h1>
+                <p class="p1"> A simple look is all you need to crush your competition.</p>
+                <br/>
+                <p class="p2"> __ </p>
+                <h4> <span class="text1">lesavenirs</span> <span class="text2">avec'simple</span> <span class="text3">WHITESPACE</span> <span class="text4">m.n.mal.sm</span> <span class="text5">barcelona33</span> <span class="text6">smoothVANILLA</span></h4>
+            </div>
+        </div>
+        <div class="fifth-div">
+            <h1> We Create Stories. </h1>
+            <p> A killer narrative will turn your readers into raving fans. </p>
+            <br/>
+            <p> __ </p>
+            <div class="cards1">
+                <div class="card1">
+                    <img src="img1.jpg"/>
+                    <h5> OVERCOMING CREATIVE BLOCK </h5>
+                    <p> Brain Gardner . MAY 1, 2017 </p>
+                </div>
+                <div class="card1">
+                    <img src="img2.jpg"/>
+                    <h5> WHY COMMUNICATION IS KEY </h5>
+                    <p> Brain Gardner . MAY 1, 2017 </p>
+                </div>
+                <div class="card1">
+                    <img src="imgg3.jpg"/>
+                    <h5> THE PATH OF LEAST RESISTANCE </h5>
+                    <p> Brain Gardner . MAY 1, 2017 </p>
+                </div>
+                <div class="card1">
+                    <img src="img4.jpg"/>
+                    <h5> HOW TO REACT NEW HEIGHTS</h5>
+                    <p> Brain Gardner . MAY 1, 2017 </p>
+                </div>
+            </div>
+        </div>
+        <div class="sixth-div">
+            <p> Hit the ground running with a minimalist look. </p>
+            <button> LEARN MORE </button>
+        </div>
+        <div class="seventh-div">
+            <img src="m.jpg"/>
+            <p> Handcrafted with in ❤️Chicago. powered by StudioPress</p>
+            <p>FACEBOOK - TWITTER - INSTAGRAM</p>
+        </div>
+    </div>
+</body>
+</html>
